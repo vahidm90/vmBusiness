@@ -55,7 +55,6 @@ get_header( 'front-page' );
             </div>
         </div>
     </div>
-</div>
 <?php
 
 get_footer( 'front-page' );

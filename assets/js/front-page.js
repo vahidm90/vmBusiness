@@ -1,7 +1,5 @@
 $('.anim-slider').animateSlider(
     {
-        autoplay: true,
-        interval: 10000,
         animations:
             {
                 0:
@@ -31,7 +29,7 @@ $('.anim-slider').animateSlider(
                         "#s2-title":
                             {
                                 show: "bounceInLeft",
-                                hide: "rubberBand",
+                                hide: "jello",
                                 delayShow: "delay0-5s"
                             },
                         ".s2-step-1":

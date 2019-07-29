@@ -1,10 +1,18 @@
 $(function ($) {
     var $topItems = $('#top-bar-items');
+    $('#top-bar-items > li:nth-child(1)').append('<button class="close dashicons dashicons-no bg-danger text-light border-0 position-absolute h-100 rounded-0 m-0 p-0"></button>');
     $('#toggle-top-bar').click(function () {
-        $topItems.toggleClass('active', 500);
+        $topItems.toggleClass('active', 500, function () {
+            if ($topItems.hasClass('active')) {
+                $('#wrap').addClass('faded', 500);
+            } else {
+                $('#wrap').removeClass('faded', 500);
+            }
+        });
     });
     $topItems.on('click', 'button.close', function () {
         $topItems.removeClass('active', 500);
+        $('#wrap').removeClass('faded', 500);
     });
     $topItems.on('click', 'button.expand', function (e) {
         e.stopPropagation();

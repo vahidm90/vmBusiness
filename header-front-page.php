@@ -40,7 +40,7 @@ html;
 			'container'   => '',
 			'fallback_cb' => false,
 			'walker'      => new Walker_Nav_Menu(),
-			'items_wrap'  => '<ul class="%2$s list-group list-group-flush" id="top-bar-items"><button class="close dashicons dashicons-no position-absolute bg-transparent border-0 rounded-0 m-0 p-0"></button>%3$s</ul>'
+			'items_wrap'  => '<ul class="%2$s list-group list-group-flush" id="top-bar-items">%3$s</ul>'
 		)
 	);
 	?>

@@ -17,7 +17,9 @@ $path = empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
 			</div>
 		</li>
 		<li class="anim-slide p-1 p-sm-3 pt-5 pt-sm-5" id="slide-2">
-            <h2 class="slide-title d-block mt-0 p-3 w-100" id="s2-title"><?php _e( 'Our Products', 'vmbwpt-en' ); ?></h2>
+            <h2 class="slide-title d-block mt-0 p-3 w-100 mt-lg-5" id="s2-title">
+                <?php _e( 'Our Products', 'vmbwpt-en' ); ?>
+            </h2>
 			<div class="slide-content h-100 pt-5 w-50" id="s2-1">
 				<p class="slide-text text-white-50 s2-step-2 h4 mt-2" id="s2-text-1-1"><?php _ex( 'Penetration Bitumen', 'Slider Text', 'vmbwpt-en' ); ?></p>
 				<p class="slide-text text-white-50 s2-step-3 d-sm-inline-block h6 m-3" id="s2-text-1-2"><?php _e( '40-50', 'vmbwpt-en'); ?></p>
@@ -36,7 +38,7 @@ $path = empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
 		</li>
 		<li class="anim-slide p-1 p-sm-3 pt-5 pt-sm-5" id="slide-3">
             <div class="slide-content w-100 text-center position-static">
-                <h2 class="slide-title mt-0 p-3" id="s3-title"><?php _e( 'Our Products', 'vmbwpt-en' ); ?></h2>
+                <h2 class="slide-title mt-0 p-3 mt-lg-5" id="s3-title"><?php _e( 'Our Products', 'vmbwpt-en' ); ?></h2>
                 <p class="slide-text h6 my-1 m-sm-4 p-1 p-sm-3 d-sm-inline-block" id="s3-text-1"><?php _e('Paraffin Wax', 'vmbwpt-en' ); ?></p>
                 <p class="slide-text h6 my-1 m-sm-4 p-1 p-sm-3 d-sm-inline-block" id="s3-text-2"><?php _e('Slack Wax', 'vmbwpt-en' ); ?></p>
                 <p class="slide-text h6 my-1 m-sm-4 p-1 p-sm-3 d-sm-inline-block" id="s3-text-3"><?php _e('Base Oil', 'vmbwpt-en' ); ?></p>
@@ -48,7 +50,7 @@ $path = empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
             </div>
 		</li>
 		<li class="anim-slide p-1 p-sm-3 pt-5 pt-sm-5" id="slide-4">
-				<h2 class="slide-title mt-2 position-static" id="s4-title">
+				<h2 class="slide-title mt-2 position-static mt-lg-5" id="s4-title">
 					<?php _ex( 'Where are you?', 'Slider Title', 'vmbwpt-en' ); ?>
 				</h2>
 			<div class="slide-content position-relative h-100 w-100" id="s4-text-img" style="background-image: url(<?php echo $path; ?>/images/big/export_everywhere.jpg)">
@@ -77,7 +79,7 @@ $path = empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
 		</li>
 		<li class="anim-slide p-1 p-sm-3 pt-5 pt-sm-5" id="slide-5">
             <div class="slide-content h-100 p-4 w-100">
-                <h2 class="slide-title mt-2" id="s5-title"><?php _e( 'Your choice matters', 'vmbwpt-en' ); ?></h2>
+                <h2 class="slide-title mt-2 mt-lg-5" id="s5-title"><?php _e( 'Your choice matters', 'vmbwpt-en' ); ?></h2>
                 <p class="text-left slide-text h6 m-1 m-sm-3" id="s5-text-1">
                     <span class="dashicons dashicons-yes" id="s5-text-1-tick"></span>
                     <?php _e( 'Fast Delivery', 'vmbwpt-en' ); ?>
@@ -102,7 +104,7 @@ $path = empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
 		</li>
 		<li class="anim-slide p-1 p-sm-3 pt-5 pt-sm-5" id="slide-6">
             <div class="slide-content position-relative text-left">
-                <p class="slide-text h6 m-1 m-sm-3" id="s6-text-1">
+                <p class="slide-text h6 m-1 m-sm-3 mt-lg-5" id="s6-text-1">
                     <span class="dashicons dashicons-yes" id="s6-text-1-tick"></span>
 		            <?php _e( 'Quality Goods', 'vmbwpt-en' ); ?>
                 </p>
@@ -120,7 +122,7 @@ $path = empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
 		</li>
 		<li class="anim-slide p-1 p-sm-3 pt-5 pt-sm-5" id="slide-7">
             <div class="slide-content position-relative">
-                <h2 class="slide-title text-white" id="s7-title"><?php _e( 'Packagings', 'vmbwpt-en' ); ?></h2>
+                <h2 class="slide-title text-white mt-lg-5" id="s7-title"><?php _e( 'Packagings', 'vmbwpt-en' ); ?></h2>
             </div>
             <div class="slide-content position-relative mt-2">
                 <p class="slide-text text-light h6 m-1 m-sm-3" id="s7-text-1"><?php _e( 'Bulk', 'vmbwpt-en' ); ?></p>
@@ -135,13 +137,13 @@ $path = empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
 			<img src="<?php echo $path; ?>/images/big/oil_drum.jpg" alt="" class="d-none d-sm-block" id="s7-img-5"/>
 		</li>
 		<li class="anim-slide p-1 p-sm-3 pt-5 pt-sm-5" id="slide-8">
-			<h2 class="slide-title" id="s8-title"><?php _e( 'Land and Sea Routes', 'vmbwpt-en' ); ?></h2>
+			<h2 class="slide-title mt-lg-5" id="s8-title"><?php _e( 'Land and Sea Routes', 'vmbwpt-en' ); ?></h2>
 			<img src="<?php echo $path; ?>/images/big/train.jpg" alt="" class="d-block" id="s8-img-1"/>
 			<img src="<?php echo $path; ?>/images/big/ship_leaving_port.jpg" alt="" class="d-block" id="s8-img-2"/>
 		</li>
 		<li class="anim-slide p-1 p-sm-3 pt-5 pt-sm-5" id="slide-9">
             <div class="slide-content position-relative text-left">
-                <p class="slide-text h6 m-1 m-sm-3" id="s9-text-1"><?php _e( 'What is your order?', 'vmbwpt-en' ); ?></p>
+                <p class="slide-text h6 m-1 m-sm-3 mt-lg-5" id="s9-text-1"><?php _e( 'What is your order?', 'vmbwpt-en' ); ?></p>
                 <p class="slide-text h6 m-1 m-sm-3" id="s9-text-2"><?php _e( 'Contact Us', 'vmbwpt-en' ); ?></p>
             </div>
 			<img src="<?php echo $path; ?>/images/phone.jpg" alt="" class="d-block" id="s9-img-1"/>

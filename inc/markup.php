@@ -16,7 +16,7 @@ function vmbwpt_nav_a_title( $title, $item, $args, $depth ) {
 	endif;
 
 	if ( $args->walker->has_children ) :
-		$title .= '<button class="expand dashicons dashicons-plus bg-transparent border-0 float-right h-100 rounded-0 p-0 m-0"></button>';
+		$title .= '<button class="expand dashicons dashicons-plus bg-transparent text-light border-0 float-right h-100 rounded-0 p-0 m-0"></button>';
 	endif;
 
 	return $title;
@@ -42,7 +42,7 @@ function vmbwpt_nav_li_tag( $html, $item, $depth, $args ) {
 	return $html;
 }
 
-add_filter( 'walker_nav_menu_start_el', 'vmbwpt_nav_li_tag', 10, 4 );
+//add_filter( 'walker_nav_menu_start_el', 'vmbwpt_nav_li_tag', 10, 4 );
 
 /**
  * Modifies walker menu <a> attributes.
@@ -57,6 +57,12 @@ add_filter( 'walker_nav_menu_start_el', 'vmbwpt_nav_li_tag', 10, 4 );
 function vmbwpt_nav_a_attrib( $attribs, $item, $args, $depth ) {
 	if ( 3 !== $args->menu ) :
 		return $attribs;
+	endif;
+
+	if ( empty($attribs['class'] ) ) :
+		$attribs['class'] = 'text-light';
+	else :
+		$attribs['class'] .= ' text-light';
 	endif;
 
 	return $attribs;
