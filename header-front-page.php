@@ -7,12 +7,12 @@
 <?php
 //get_template_part( 'animateSlideTest/index');
 //die;
-global $vmbwpt_supported_lang, $vmbwpt_lang, $vmbwpt_comma, $vmbwpt_12;
+global $vmbwpt_lang, $vmbwpt_comma, $vmbwpt_12;
 
-$path = empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
-	get_template_directory_uri() . '/assets' : $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'];
+$path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'] ) ?
+	get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'];
 
-$logo_alt = _x( 'Logo', 'Image alt text', 'vmbwpt-en' );
+$logo_alt = _x( 'Logo', 'Image alt text', VMBWPT_TEXT_DOMAIN );
 $s_name   = get_bloginfo();
 $s_url = home_url();
 $brand    = <<<html

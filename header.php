@@ -2,10 +2,10 @@
 
 //get_template_part( 'animSlide/index' );
 
-global $vmbwpt_supported_lang, $vmbwpt_lang;
+global $vmbwpt_lang;
 
-$path = empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
-	get_template_directory_uri() . '/assets' : $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'];
+$path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'] ) ?
+	get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'];
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

@@ -4,14 +4,14 @@
  * Enqueues style sheets and javascript files.
  */
 function vmbwpt_load_css_js() {
-	global $vmbwpt_lang, $vmbwpt_supported_lang, $vmbwpt_dir;
+	global $vmbwpt_lang, $vmbwpt_dir;
 
 	$rtl = ( 'left' === $vmbwpt_dir ? '' : '-rtl' );
 	$min = ( false === strpos( $_SERVER['SERVER_NAME'], 'petroneginj' ) ? '' : '.min' );
 	$css_dep = array();
 	$js_dep  = array();
-	$path    = ( empty( $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] ) ?
-		get_template_directory_uri() . '/assets' : $vmbwpt_supported_lang[ $vmbwpt_lang ]['assets_dir'] );
+	$path    = ( empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'] ) ?
+		get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'] );
 
 	wp_deregister_script( 'jquery' );
 	if ( ! is_admin() ) :
