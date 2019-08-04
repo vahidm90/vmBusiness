@@ -11,7 +11,9 @@
  * @return       string Modified markup
  */
 function vmbwpt_nav_a_title( $title, $item, $args, $depth ) {
-	if ( 3 !== $args->menu ) :
+	global $vmbwpt_lang;
+
+	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
 		return $title;
 	endif;
 
@@ -35,7 +37,9 @@ add_filter( 'nav_menu_item_title', 'vmbwpt_nav_a_title', 10, 4 );
  * @return       string Modified markup
  */
 function vmbwpt_nav_li_tag( $html, $item, $depth, $args ) {
-	if ( 3 !== $args->menu ) :
+	global $vmbwpt_lang;
+
+	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
 		return $html;
 	endif;
 
@@ -55,7 +59,9 @@ function vmbwpt_nav_li_tag( $html, $item, $depth, $args ) {
  * @return         array  Modified attributes
  */
 function vmbwpt_nav_a_attrib( $attribs, $item, $args, $depth ) {
-	if ( 3 !== $args->menu ) :
+	global $vmbwpt_lang;
+
+	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
 		return $attribs;
 	endif;
 
@@ -81,7 +87,9 @@ add_filter( 'nav_menu_link_attributes', 'vmbwpt_nav_a_attrib', 10, 4 );
  * @return         array  Modified classes
  */
 function vmbwpt_nav_li_class( $classes, $item, $args, $depth ) {
-	if ( 3 !== $args->menu ) :
+	global $vmbwpt_lang;
+
+	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
 		return $classes;
 	endif;
 
@@ -102,7 +110,9 @@ add_filter( 'nav_menu_css_class', 'vmbwpt_nav_li_class', 10, 4 );
  * @return         array  Modified classes
  */
 function vmbwpt_nav_ul_class( $classes, $args, $depth ) {
-	if ( 3 !== $args->menu ) :
+	global $vmbwpt_lang;
+
+	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
 		return $classes;
 	endif;
 

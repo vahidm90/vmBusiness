@@ -14,7 +14,8 @@ define(
 			'translated' => _x( 'English', 'Site Language', VMBWPT_TEXT_DOMAIN ),
 			'font-url'   => array(),
 			'minified'   => '.min',
-			'pages'      => array( 'contact' => 5, 'home' => 15, 'product' => 17, 'about' => 13 )
+			'pages'      => array( 'contact' => 5, 'home' => 15, 'product' => 17, 'about' => 13 ),
+			'menus'      => array( 'main' => 3, 'footer' => 4 )
 		),
 		'persian' => array(
 			'direction'  => 'rtl',
@@ -24,7 +25,9 @@ define(
 			'translated' => _x( 'Persian', 'Site Language', VMBWPT_TEXT_DOMAIN ),
 			'assets_dir' => 'http://www.petroneginj.com/wp-content/themes/VMBusinessRep/assets',
 			'font-url'   => array(),
-			'minified'   => '.min'
+			'minified'   => '.min',
+			'pages'      => array( 'contact' => 5, 'home' => 15, 'product' => 17, 'about' => 13 ),
+			'menus'      => array( 'main' => 2, 'footer' => 3 )
 		),
 		'default' => array(
 			'direction'  => 'ltr',
@@ -34,7 +37,8 @@ define(
 			'translated' => _x( 'English', 'Site Language', VMBWPT_TEXT_DOMAIN ),
 			'font-url'   => array(),
 			'minified'   => '',
-			'pages'      => array( 'contact' => 5, 'home' => 15, 'product' => 17, 'about' => 13 )
+			'pages'      => array( 'contact' => 5, 'home' => 15, 'product' => 17, 'about' => 13 ),
+			'menus'      => array( 'main' => 3, 'footer' => 4 )
 		)
 	)
 );
