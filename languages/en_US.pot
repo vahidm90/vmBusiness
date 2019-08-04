@@ -1,18 +1,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-08-02 14:46+0430\n"
-"PO-Revision-Date: 2019-08-02 14:48+0430\n"
+"POT-Creation-Date: 2019-08-04 17:06+0430\n"
+"PO-Revision-Date: 2019-08-04 17:10+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: fa_IR\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"X-Poedit-KeywordsList: __;_e;_x;_ex\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;esc_attr_e;"
+"esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_x:1,2c;esc_html_e;"
+"translate_nooped_plural\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: .git\n"
 "X-Poedit-SearchPathExcluded-1: languages\n"
@@ -20,43 +22,57 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-3: *.js\n"
 
 #: front-page.php:19
+msgctxt "About Circle"
 msgid "Who are we?"
 msgstr "Who are we?"
 
-#: front-page.php:28 template-parts/front-page/slider.php:21
-#: template-parts/front-page/slider.php:41
+#: front-page.php:28
+msgctxt "Products Circle"
 msgid "Our Products"
 msgstr "Our Products"
 
 #: front-page.php:37
+msgctxt "Contact Circle"
 msgid "Get in touch!"
 msgstr "Get in touch!"
 
 #: front-page.php:48
+msgctxt "Home page content heading"
 msgid "Our Mission"
 msgstr "Our Mission"
 
-#: functions.php:14 functions.php:34
+#: functions.php:14 functions.php:37
+msgctxt "Site Language"
 msgid "English"
 msgstr "English"
 
-#: functions.php:24
+#: functions.php:25
+msgctxt "Site Language"
 msgid "Persian"
 msgstr "Persian"
 
 #: header-front-page.php:15 template-parts/front-page/slider.php:14
+msgctxt "Image alt text"
 msgid "Logo"
 msgstr "Logo"
 
 #: inc/init.php:31
+msgctxt "Menu location description"
 msgid "Main Navigation"
 msgstr "Main Navigation"
 
 #: inc/init.php:32
+msgctxt "Menu location description"
 msgid "Footer Menu"
 msgstr "Footer Menu"
 
+#: template-parts/front-page/slider.php:21
+#: template-parts/front-page/slider.php:41
+msgid "Our Products"
+msgstr "Our Products"
+
 #: template-parts/front-page/slider.php:24
+msgctxt "Slider Text"
 msgid "Penetration Bitumen"
 msgstr "Penetration Bitumen"
 
@@ -109,6 +125,7 @@ msgid "R.P.O"
 msgstr "R.P.O"
 
 #: template-parts/front-page/slider.php:54
+msgctxt "Slider Title"
 msgid "Where are you?"
 msgstr "Where are you?"
 
@@ -213,3 +230,33 @@ msgstr "What is your order?"
 #: template-parts/front-page/slider.php:147
 msgid "Contact Us"
 msgstr "Contact Us"
+
+#~ msgid "Who are we?"
+#~ msgstr "آشنایی با شرکت پترونگین جی"
+
+#~ msgid "Get in touch!"
+#~ msgstr "با ما تماس بگیرید!"
+
+#~ msgid "Our Mission"
+#~ msgstr "هدف ما"
+
+#~ msgid "English"
+#~ msgstr "انگلیسی"
+
+#~ msgid "Persian"
+#~ msgstr "فارسی"
+
+#~ msgid "Logo"
+#~ msgstr "نشان"
+
+#~ msgid "Main Navigation"
+#~ msgstr "منوی اصلی"
+
+#~ msgid "Footer Menu"
+#~ msgstr "منوی پاورقی"
+
+#~ msgid "Penetration Bitumen"
+#~ msgstr "قیر نفوذی"
+
+#~ msgid "Where are you?"
+#~ msgstr "کجا هستید؟"
