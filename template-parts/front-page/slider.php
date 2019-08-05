@@ -2,8 +2,8 @@
 
 global $vmbwpt_lang, $vmbwpt_comma;
 
-$path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'] ) ?
-	get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'];
+$path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] ) ?
+	get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'];
 
 ?>
 <div class="vh-100 vw-100" id="welcome">

@@ -2,8 +2,8 @@
 
 global $vmbwpt_lang;
 
-$path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'] ) ?
-	get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'];
+$path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] ) ?
+	get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'];
 
 get_header( 'front-page' );
 

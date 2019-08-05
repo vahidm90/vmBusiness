@@ -2,6 +2,7 @@
 
 // Constants
 //TODO: Set font urls.
+$vmbwpt_is_dev = ( false === strpos( $_SERVER['SERVER_NAME'],'petroneginj.com'  ) ? true : false );
 define( 'VMBWPT_TEXT_DOMAIN', 'VMBusinessRep' );
 define(
 	'VMBWPT_LANGUAGES',
@@ -9,36 +10,21 @@ define(
 		'english' => array(
 			'direction'  => 'ltr',
 			'prefix'     => 'en',
-			'url'        => 'http://www.petroneginj.com',
 			'native'     => 'English',
 			'translated' => _x( 'English', 'Site Language', VMBWPT_TEXT_DOMAIN ),
 			'font-url'   => array(),
-			'minified'   => '.min',
 			'pages'      => array( 'contact' => 5, 'home' => 15, 'product' => 17, 'about' => 13 ),
 			'menus'      => array( 'main' => 3, 'footer' => 4 )
 		),
 		'persian' => array(
 			'direction'  => 'rtl',
 			'prefix'     => 'fa',
-			'url'        => 'http://farsi.petroneginj.com',
 			'native'     => 'فارسی',
 			'translated' => _x( 'Persian', 'Site Language', VMBWPT_TEXT_DOMAIN ),
-			'assets_dir' => 'http://www.petroneginj.com/wp-content/themes/VMBusinessRep/assets',
+			'assets-dir' => $vmbwpt_is_dev ? '' : 'http://www.petroneginj.com/wp-content/themes/VMBusinessRep/assets',
 			'font-url'   => array(),
-			'minified'   => '.min',
 			'pages'      => array( 'contact' => 5, 'home' => 15, 'product' => 17, 'about' => 13 ),
 			'menus'      => array( 'main' => 2, 'footer' => 3 )
-		),
-		'default' => array(
-			'direction'  => 'ltr',
-			'prefix'     => 'en',
-			'url'        => 'http://mywebsite.test',
-			'native'     => 'English',
-			'translated' => _x( 'English', 'Site Language', VMBWPT_TEXT_DOMAIN ),
-			'font-url'   => array(),
-			'minified'   => '',
-			'pages'      => array( 'contact' => 5, 'home' => 15, 'product' => 17, 'about' => 13 ),
-			'menus'      => array( 'main' => 3, 'footer' => 4 )
 		)
 	)
 );

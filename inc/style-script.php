@@ -4,14 +4,14 @@
  * Enqueues style sheets and javascript files.
  */
 function vmbwpt_load_css_js() {
-	global $vmbwpt_lang, $vmbwpt_dir;
+	global $vmbwpt_lang, $vmbwpt_dir, $vmbwpt_is_dev;
 
 	$rtl = ( 'left' === $vmbwpt_dir ? '' : '-rtl' );
-	$min = ( false === strpos( $_SERVER['SERVER_NAME'], 'petroneginj' ) ? '' : '.min' );
+	$min = $vmbwpt_is_dev ? '' : '.min';
 	$css_dep = array();
 	$js_dep  = array();
-	$path    = ( empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'] ) ?
-		get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'] );
+	$path    = ( empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] ) ?
+		get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] );
 
 	wp_deregister_script( 'jquery' );
 	if ( ! is_admin() ) :
@@ -37,7 +37,7 @@ function vmbwpt_load_css_js() {
 	array_push( $css_dep, 'vmbwpt-jqueryUI' );
 
 //	Template CSS
-	wp_enqueue_style( 'vmbwpt-basic', "$path/css/basic$min.css", $css_dep, '1.0' );
+	wp_enqueue_style( 'vmbwpt-basic', "$path/css/basic$rtl$min.css", $css_dep, '1.0' );
 	array_push( $css_dep, 'vmbwpt-basic' );
 
 //  jQuery JS
@@ -62,13 +62,13 @@ function vmbwpt_load_css_js() {
 	if ( is_front_page() ) :
 
 //      CSS
-		wp_enqueue_style( 'vmbwpt-anim-slider', "$path/animSlider/animSlider$min.css", $css_dep, '1.0.6' );
+		wp_enqueue_style( 'vmbwpt-anim-slider', "$path/animSlider/animSlider$rtl$min.css", $css_dep, '1.0.6' );
 		array_push( $css_dep, 'vmbwpt-anim-slider' );
 		wp_enqueue_style( 'vmbwpt-normalize', "$path/animSlider/normalize-8.0.1$min.css", array(), '8.0.1' );
 		array_push( $css_dep, 'vmbwpt-normalize' );
 		wp_enqueue_style( 'vmbwpt-aos', "$path/aos/aos-2.3.4.min.css", $css_dep, '2.3.4' );
 		array_push( $css_dep, 'vmbwpt-aos' );
-		wp_enqueue_style( 'vmbwpt-front-page', "$path/css/front-page$min.css", $css_dep, '1.0' );
+		wp_enqueue_style( 'vmbwpt-front-page', "$path/css/front-page$rtl$min.css", $css_dep, '1.0' );
 
 //		JS
 		wp_enqueue_script( 'vmbwpt-modernize-js', "$path/animSlider/modernizer-2.8.1$min.js", $js_dep, '2.8.1', true );
@@ -77,7 +77,7 @@ function vmbwpt_load_css_js() {
 		array_push( $js_dep, 'vmbwpt-anim-slider-js' );
 		wp_enqueue_script( 'vmbwpt-aos-js', "$path/aos/aos-2.3.4.min.js", $js_dep, '2.3.4', true );
 		wp_add_inline_script( 'vmbwpt-aos-js', 'AOS.init({duration:1000});' );
-		wp_enqueue_script( 'vmbwpt-front-page-js', "$path/js/front-page$min.js", $js_dep, '1.0', true );
+		wp_enqueue_script( 'vmbwpt-front-page-js', "$path/js/front-page$rtl$min.js", $js_dep, '1.0', true );
 
     elseif ( is_singular( 'page' ) ) :
 

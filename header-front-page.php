@@ -1,48 +1,39 @@
 <?php get_header(); ?>
 <meta name="description"
-      content="<?php esc_attr_e( get_bloginfo( 'description' ) ); ?>" />
-<?php wp_head();?>
+      content="<?php esc_attr_e( get_bloginfo( 'description' ) ); ?>"/>
+<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php
-//get_template_part( 'animateSlideTest/index');
-//die;
 global $vmbwpt_lang, $vmbwpt_comma, $vmbwpt_12;
 
-$path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'] ) ?
-	get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets_dir'];
-
-$logo_alt = _x( 'Logo', 'Image alt text', VMBWPT_TEXT_DOMAIN );
-$s_name   = get_bloginfo();
-$s_url = home_url();
-$brand    = <<<html
-        <a class='navbar-brand p-0' href='$s_url' title='Home'>
-            <img src='$path/images/welcome_img.png' alt='$logo_alt' id='top-bar-logo' />$s_name
-        </a>
-html;
-$btn      = <<<'html'
-        <button class='navbar-toggler m-0' type='button' id="toggle-top-bar">
-            <span class='navbar-toggler-icon'></span>
-        </button>
-html;
+$path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] ) ?
+	get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'];
 
 //TODO: Add page links
 
 ?>
 <nav class="navbar fixed-top w-100 p-0" id="top-bar">
+    <a class='navbar-brand p-0' href='<?php echo home_url(); ?>' title='Home'>
+        <img src='<?php echo $path; ?>/images/welcome_img.png'
+             alt='<?php _ex( 'Logo', 'Image alt text', VMBWPT_TEXT_DOMAIN ); ?>' id='top-bar-logo'/>
+		<?php bloginfo(); ?>
+    </a>
+    <button class='navbar-toggler m-0' type='button' id="toggle-top-bar">
+        <span class='navbar-toggler-icon'></span>
+    </button>
 	<?php
-
-	printf( $vmbwpt_12, $brand, $btn );
 
 	wp_nav_menu(
 		array(
-			'menu'        => 3,
+			'menu'        => VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'],
 			'container'   => '',
 			'fallback_cb' => false,
 			'walker'      => new Walker_Nav_Menu(),
 			'items_wrap'  => '<ul class="%2$s list-group list-group-flush" id="top-bar-items">%3$s</ul>'
 		)
 	);
+
 	?>
 </nav>
 

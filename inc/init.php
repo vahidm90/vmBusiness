@@ -39,26 +39,25 @@ add_action( 'after_setup_theme', 'vmbwpt_setup_theme' );
 /**
  * Sets site locale based on current sub-domain/user-set locale.
  *
- * @param $loc string Locale ID
+ * @param $locale string Locale ID
  *
- * @return     string Modified locale
+ * @return        string Modified locale
  */
-function vmbwpt_set_lang( $loc ) {
+function vmbwpt_set_lang( $locale ) {
 	global $vmbwpt_lang;
 
 	if ( isset( VMBWPT_LANGUAGES[ $vmbwpt_lang ]) ) :
-		return $loc;
+		return $locale;
 	endif;
 
-	if ( false === strpos( $_SERVER['SERVER_NAME'], 'petroneginj' ) ) :
-		$vmbwpt_lang = 'default';
-	elseif ( 'fa_IR' === $loc ) :
+	if ( 'fa_IR' === $locale ) :
 		$vmbwpt_lang = 'persian';
 	else :
 		$vmbwpt_lang = 'english';
 	endif;
 
-	return $loc;
+
+	return $locale;
 }
 
 add_filter( 'locale', 'vmbwpt_set_lang' );
