@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-08-04 17:06+0430\n"
+"POT-Creation-Date: 2019-08-06 17:07+0430\n"
 "PO-Revision-Date: 2019-08-04 17:10+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -24,212 +25,216 @@ msgstr ""
 #: front-page.php:19
 msgctxt "About Circle"
 msgid "Who are we?"
-msgstr "Who are we?"
+msgstr ""
 
 #: front-page.php:28
 msgctxt "Products Circle"
 msgid "Our Products"
-msgstr "Our Products"
+msgstr ""
 
 #: front-page.php:37
 msgctxt "Contact Circle"
 msgid "Get in touch!"
-msgstr "Get in touch!"
+msgstr ""
 
 #: front-page.php:48
 msgctxt "Home page content heading"
 msgid "Our Mission"
-msgstr "Our Mission"
+msgstr ""
 
-#: functions.php:14 functions.php:37
+#: functions.php:14
 msgctxt "Site Language"
 msgid "English"
-msgstr "English"
+msgstr ""
 
-#: functions.php:25
+#: functions.php:23
 msgctxt "Site Language"
 msgid "Persian"
-msgstr "Persian"
+msgstr ""
 
-#: header-front-page.php:15 template-parts/front-page/slider.php:14
+#: header-front-page.php:19 template-parts/front-page/slider.php:14
 msgctxt "Image alt text"
 msgid "Logo"
-msgstr "Logo"
+msgstr ""
 
 #: inc/init.php:31
 msgctxt "Menu location description"
 msgid "Main Navigation"
-msgstr "Main Navigation"
+msgstr ""
 
 #: inc/init.php:32
 msgctxt "Menu location description"
 msgid "Footer Menu"
-msgstr "Footer Menu"
+msgstr ""
+
+#: page.php:147
+msgid "Browse subcategories"
+msgstr ""
 
 #: template-parts/front-page/slider.php:21
 #: template-parts/front-page/slider.php:41
 msgid "Our Products"
-msgstr "Our Products"
+msgstr ""
 
 #: template-parts/front-page/slider.php:24
 msgctxt "Slider Text"
 msgid "Penetration Bitumen"
-msgstr "Penetration Bitumen"
+msgstr ""
 
 #: template-parts/front-page/slider.php:25
 msgid "40-50"
-msgstr "40-50"
+msgstr ""
 
 #: template-parts/front-page/slider.php:26
 msgid "60-70"
-msgstr "60-70"
+msgstr ""
 
 #: template-parts/front-page/slider.php:27
 msgid "80-100"
-msgstr "80-100"
+msgstr ""
 
 #: template-parts/front-page/slider.php:31
 msgid "Viscosity"
-msgstr "Viscosity"
+msgstr ""
 
 #: template-parts/front-page/slider.php:32
 msgid "VG10"
-msgstr "VG10"
+msgstr ""
 
 #: template-parts/front-page/slider.php:33
 msgid "VG20"
-msgstr "VG20"
+msgstr ""
 
 #: template-parts/front-page/slider.php:34
 msgid "VG30"
-msgstr "VG30"
+msgstr ""
 
 #: template-parts/front-page/slider.php:35
 msgid "VG40"
-msgstr "VG40"
+msgstr ""
 
 #: template-parts/front-page/slider.php:42
 msgid "Paraffin Wax"
-msgstr "Paraffin Wax"
+msgstr ""
 
 #: template-parts/front-page/slider.php:43
 msgid "Slack Wax"
-msgstr "Slack Wax"
+msgstr ""
 
 #: template-parts/front-page/slider.php:44
 msgid "Base Oil"
-msgstr "Base Oil"
+msgstr ""
 
 #: template-parts/front-page/slider.php:45
 msgid "R.P.O"
-msgstr "R.P.O"
+msgstr ""
 
 #: template-parts/front-page/slider.php:54
 msgctxt "Slider Title"
 msgid "Where are you?"
-msgstr "Where are you?"
+msgstr ""
 
 #: template-parts/front-page/slider.php:58
 msgid "Afghanistan"
-msgstr "Afghanistan"
+msgstr ""
 
 #: template-parts/front-page/slider.php:59
 msgid "Pakistan"
-msgstr "Pakistan"
+msgstr ""
 
 #: template-parts/front-page/slider.php:60
 msgid "Uzbekistan"
-msgstr "Uzbekistan"
+msgstr ""
 
 #: template-parts/front-page/slider.php:61
 msgid "Georgia"
-msgstr "Georgia"
+msgstr ""
 
 #: template-parts/front-page/slider.php:64
 msgid "India"
-msgstr "India"
+msgstr ""
 
 #: template-parts/front-page/slider.php:65
 msgid "Myanmar"
-msgstr "Myanmar"
+msgstr ""
 
 #: template-parts/front-page/slider.php:66
 msgid "Bangladesh"
-msgstr "Bangladesh"
+msgstr ""
 
 #: template-parts/front-page/slider.php:67
 msgid "Kenya"
-msgstr "Kenya"
+msgstr ""
 
 #: template-parts/front-page/slider.php:71
 msgid "World-wide coverage"
-msgstr "World-wide coverage"
+msgstr ""
 
 #: template-parts/front-page/slider.php:75
 #: template-parts/front-page/slider.php:101
 #: template-parts/front-page/slider.php:117
 msgid "Enjoy Your Purchase"
-msgstr "Enjoy Your Purchase"
+msgstr ""
 
 #: template-parts/front-page/slider.php:82
 msgid "Your choice matters"
-msgstr "Your choice matters"
+msgstr ""
 
 #: template-parts/front-page/slider.php:85
 msgid "Fast Delivery"
-msgstr "Fast Delivery"
+msgstr ""
 
 #: template-parts/front-page/slider.php:89
 msgid "Customer Respect"
-msgstr "Customer Respect"
+msgstr ""
 
 #: template-parts/front-page/slider.php:93
 msgid "Experienced Experts"
-msgstr "Experienced Experts"
+msgstr ""
 
 #: template-parts/front-page/slider.php:97
 msgid "Competitive Prices"
-msgstr "Competitive Prices"
+msgstr ""
 
 #: template-parts/front-page/slider.php:109
 msgid "Quality Goods"
-msgstr "Quality Goods"
+msgstr ""
 
 #: template-parts/front-page/slider.php:113
 msgid "From Reliable Producers"
-msgstr "From Reliable Producers"
+msgstr ""
 
 #: template-parts/front-page/slider.php:125
 msgid "Packagings"
-msgstr "Packagings"
+msgstr ""
 
 #: template-parts/front-page/slider.php:128
 msgid "Bulk"
-msgstr "Bulk"
+msgstr ""
 
 #: template-parts/front-page/slider.php:129
 msgid "Drums"
-msgstr "Drums"
+msgstr ""
 
 #: template-parts/front-page/slider.php:130
 msgid "Flexitanks"
-msgstr "Flexitanks"
+msgstr ""
 
 #: template-parts/front-page/slider.php:131
 msgid "Jumbo Bags"
-msgstr "Jumbo Bags"
+msgstr ""
 
 #: template-parts/front-page/slider.php:140
 msgid "Land and Sea Routes"
-msgstr "Land and Sea Routes"
+msgstr ""
 
 #: template-parts/front-page/slider.php:146
 msgid "What is your order?"
-msgstr "What is your order?"
+msgstr ""
 
 #: template-parts/front-page/slider.php:147
 msgid "Contact Us"
-msgstr "Contact Us"
+msgstr ""
 
 #~ msgid "Who are we?"
 #~ msgstr "آشنایی با شرکت پترونگین جی"

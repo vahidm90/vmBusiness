@@ -1,10 +1,11 @@
 @font-face {
-    font-family: vmbwpt-animateSlide-controls;
-    src:url("fonts/controls.eot?-vma0st");
-    src:url("fonts/controls.eot?#iefix-vma0st") format("embedded-opentype"),
-    url("fonts/controls.woff?-vma0st") format("woff"),
-    url("fonts/controls.ttf?-vma0st") format("truetype"),
-    url("fonts/controls.svg?-vma0st#controls") format("svg");
+    font-family: VMBWPT_animSlide;
+    src: url(../fonts/animSlide-controls.eot);
+    src: url(../fonts/animSlide-controls.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/animSlide-controls.woff2) format('woff2'),
+    url(../fonts/animSlide-controls.woff) format('woff'),
+    url(../fonts/animSlide-controls.ttf)  format('truetype'),
+    url(../fonts/animSlide-controls.svg#svganimSlide-controls) format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -122,7 +123,7 @@ nav.anim-arrows>span.anim-arrows-next:after {
     -o-transition: color .4s ease;
     transition: color .4s ease;
     font-size: 20px;
-    font-family: vmbwpt-animateSlide-controls !important;
+    font-family: VMBWPT_animSlide !important;
 }
 
 nav.anim-arrows>span.anim-arrows-prev {

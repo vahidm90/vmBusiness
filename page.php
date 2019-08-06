@@ -1,4 +1,5 @@
 <?php
+
 get_header( 'front-page' );
 
 if ( have_posts() ) :
@@ -92,6 +93,25 @@ if ( have_posts() ) :
 				endforeach;
 				$i ++;
 			endforeach;
+
+			$col_count = 12;
+			$tree_count = count( $tree );
+
+			switch ( 1 ) :
+                default :
+                    $col_count = 12;
+                    break;
+                case ( 3 < $tree_count ) :
+                    $col_count = 3;
+                    break;
+                case ( 2 < $tree_count ) :
+                    $col_count = 4;
+                    break;
+                case ( 1 < $tree_count ) :
+                    $col_count = 6;
+                    break;
+            endswitch;
+
 			?>
             <div id="wrap">
                 <?php echo $img; ?>
@@ -110,41 +130,65 @@ if ( have_posts() ) :
                                     <div class="container">
                                         <div class="row">
 											<?php
-											foreach ( $tree as $sub ) :
-												?>
-                                                <div class="col-lg-3 col-sm-6">
-                                                    <section>
-                                                        <p class="h2">
-                                                            <a href="<?php echo $sub['parent']['link']; ?>"><?php echo $sub['parent']['title']; ?></a>
-                                                        </p>
-														<?php
-														if ( empty( $sub['children'] ) ) :
-															echo '</section></div>';
-															continue;
-														endif;
-														foreach ( $sub['children'] as $sub_sub ) :
-															?>
-                                                            <p class="h6 ml-3">
-                                                                <a href="<?php echo $sub_sub['parent']['link']; ?>"><?php echo $sub_sub['parent']['title']; ?></a>
-                                                            </p>
-															<?php
-															if ( empty( $sub_sub['children'] ) ) :
-																continue;
-															endif;
-															foreach ( $sub_sub['children'] as $sub_sub_sub ) :
-																?>
-                                                                <p class="ml-6">
-                                                                    <a href="<?php echo $sub_sub_sub['link']; ?>"><?php echo $sub_sub_sub['title']; ?></a>
-                                                                </p>
-															<?php
-															endforeach;
-														endforeach;
-														?>
-                                                    </section>
+
+											if ( ! empty( get_post()->post_content ) ) :
+
+                                                ?>
+                                                <div class="col-12"><?php the_content(); ?></div>
+                                            <?php
+
+                                            endif;
+
+                                            if ( ! empty ( $tree ) ) :
+
+	                                            ?>
+                                                <div class="col-12">
+                                                    <h2 class="mt-5">
+			                                            <?php _e( 'Browse subcategories', VMBWPT_TEXT_DOMAIN ); ?>
+                                                    </h2>
                                                 </div>
-											<?php
-											endforeach;
-											?>
+	                                            <?php
+
+	                                            foreach ( $tree as $sub ) :
+
+		                                            ?>
+                                                    <div class="col-lg-<?php echo $col_count; ?> col-md-6">
+                                                        <section>
+                                                            <p class="h2">
+                                                                <a href="<?php echo $sub['parent']['link']; ?>"><?php echo $sub['parent']['title']; ?></a>
+                                                            </p>
+				                                            <?php
+				                                            if ( empty( $sub['children'] ) ) :
+					                                            echo '</section></div>';
+					                                            continue;
+				                                            endif;
+				                                            foreach ( $sub['children'] as $sub_sub ) :
+					                                            ?>
+                                                                <p class="h6 ml-3">
+                                                                    <a href="<?php echo $sub_sub['parent']['link']; ?>"><?php echo $sub_sub['parent']['title']; ?></a>
+                                                                </p>
+					                                            <?php
+					                                            if ( empty( $sub_sub['children'] ) ) :
+						                                            continue;
+					                                            endif;
+					                                            foreach ( $sub_sub['children'] as $sub_sub_sub ) :
+						                                            ?>
+                                                                    <p class="ml-6">
+                                                                        <a href="<?php echo $sub_sub_sub['link']; ?>"><?php echo $sub_sub_sub['title']; ?></a>
+                                                                    </p>
+					                                            <?php
+					                                            endforeach;
+				                                            endforeach;
+				                                            ?>
+                                                        </section>
+                                                    </div>
+	                                            <?php
+
+	                                            endforeach;
+
+                                                endif;
+
+                                            ?>
                                         </div>
                                     </div>
                                 </main>

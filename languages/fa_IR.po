@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-08-04 17:06+0430\n"
-"PO-Revision-Date: 2019-08-04 17:08+0430\n"
+"POT-Creation-Date: 2019-08-06 17:07+0430\n"
+"PO-Revision-Date: 2019-08-06 17:08+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: front-page.php:19
 msgctxt "About Circle"
 msgid "Who are we?"
-msgstr "آشنایی با ما"
+msgstr "آشنایی با پترونگین جی"
 
 #: front-page.php:28
 msgctxt "Products Circle"
@@ -41,17 +41,17 @@ msgctxt "Home page content heading"
 msgid "Our Mission"
 msgstr "آرمان ما"
 
-#: functions.php:14 functions.php:37
+#: functions.php:14
 msgctxt "Site Language"
 msgid "English"
 msgstr "انگلیسی"
 
-#: functions.php:25
+#: functions.php:23
 msgctxt "Site Language"
 msgid "Persian"
 msgstr "فارسی"
 
-#: header-front-page.php:15 template-parts/front-page/slider.php:14
+#: header-front-page.php:19 template-parts/front-page/slider.php:14
 msgctxt "Image alt text"
 msgid "Logo"
 msgstr "لوگو"
@@ -65,6 +65,10 @@ msgstr "منوی اصلی"
 msgctxt "Menu location description"
 msgid "Footer Menu"
 msgstr "منوی پاورقی"
+
+#: page.php:147
+msgid "Browse subcategories"
+msgstr "زیرمجموعه‌های این گروه"
 
 #: template-parts/front-page/slider.php:21
 #: template-parts/front-page/slider.php:41
@@ -230,6 +234,9 @@ msgstr "سفارش شما چیست؟"
 #: template-parts/front-page/slider.php:147
 msgid "Contact Us"
 msgstr "با ما تماس بگیرید"
+
+#~ msgid "Products of this category"
+#~ msgstr "محصولات این گروه"
 
 #~ msgid "Who are we?"
 #~ msgstr "آشنایی با شرکت پترونگین جی"
