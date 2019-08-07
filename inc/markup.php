@@ -123,6 +123,63 @@ function vmbwpt_nav_ul_class( $classes, $args, $depth ) {
 
 add_filter( 'nav_menu_submenu_css_class', 'vmbwpt_nav_ul_class', 10, 3 );
 
+function vmbwpt_add_nav_menu_item ( $items, $args ) {
+	global $vmbwpt_lang;
+
+	if ( ! in_array( $args->menu, VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus'], true ) ) :
+		return $items;
+	endif;
+	$other_lang = array();
+	foreach ( VMBWPT_LANGUAGES as $key => $values ) :
+		if ( $vmbwpt_lang === $key ) :
+			continue;
+		endif;
+		$other_lang [ $key ]= $values;
+		$other_lang ['address'] = ( false !== strpos( $_SERVER['HTTP_HOST'], "{$values['prefix']}." ) ? "http://{$values['prefix']}.{$_SERVER['HTTP_HOST']}/" : "http://{$_SERVER['HTTP_HOST']}/" );
+	endforeach;
+
+	switch ( $args->menu ) :
+		case VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] :
+			$lang_items = '';
+			$languages = sprintf(
+				'<span dir="%1$s">%2$s</span>',
+				VMBWPT_LANGUAGES[ $vmbwpt_lang ]['direction'],
+				__( 'Languages', VMBWPT_TEXT_DOMAIN ),
+				);
+			if ( 'english' !== $vmbwpt_lang ) :
+				$languages = ' <span dir="ltr">Languages</span>';
+			endif;
+			$html = <<<html
+<li class="menu-item-has-children list-group-item position-relative">
+	<a href="#" class="text-light">
+	$languages
+	<button class="expand dashicons dashicons-plus bg-transparent text-light border-0 float-right h-100 rounded-0 p-0 m-0"></button>
+	</a>
+	<ul class="sub-menu list-group list-group-flush d-0">%s</ul>
+</li>
+html;
+	if ( ! empty( $other_lang ) ) :
+		foreach ( $other_lang as $lang ) :
+				$lang_items .=<<<html
+		<li class="list-group-item position-relative">
+			<a href="{$lang['address']}" class="text-light">
+				<span dir="{$lang['direction']}">{$lang['native']}</span>
+				<span>{$lang['translated']}</span>
+			</a>
+		</li>
+html;
+		endforeach;
+	endif;
+	$html = sprintf( $html, $lang_items );
+break;
+endswitch;
+
+	$items .= '<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105 list-group-item position-relative"><a href="http://mywebsite.test/contact-us/" class="text-light">Contact Us</a></li>';
+
+	return $items;
+}
+
+add_filter( 'wp_nav_menu_items', 'vmbwpt_add_nav_menu_item', 10, 2 );
 
 //TODO: Create titles for all page templates.
 
@@ -148,7 +205,7 @@ function vmbwpt_set_doc_title( $title ) {
 		else:
 			$title = esc_html( get_the_title() );
 			foreach ( $parents as $parent ) :
-				$title .= ' - ' . esc_html( get_the_title( $parent ) );
+				$title .= ' << ' . esc_html( get_the_title( $parent ) );
 			endforeach;
 			return $title . ' | ' . get_bloginfo();
 		endif;
