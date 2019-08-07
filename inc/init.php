@@ -51,9 +51,9 @@ function vmbwpt_set_lang( $locale ) {
 	endif;
 
 	if ( 'fa_IR' === $locale ) :
-		$vmbwpt_lang = 'persian';
+		$vmbwpt_lang = 'Persian';
 	else :
-		$vmbwpt_lang = 'english';
+		$vmbwpt_lang = 'English';
 	endif;
 
 

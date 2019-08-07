@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-08-06 17:07+0430\n"
-"PO-Revision-Date: 2019-08-06 17:08+0430\n"
+"POT-Creation-Date: 2019-08-07 15:54+0430\n"
+"PO-Revision-Date: 2019-08-07 15:54+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -42,12 +42,10 @@ msgid "Our Mission"
 msgstr "آرمان ما"
 
 #: functions.php:14
-msgctxt "Site Language"
 msgid "English"
 msgstr "انگلیسی"
 
 #: functions.php:23
-msgctxt "Site Language"
 msgid "Persian"
 msgstr "فارسی"
 
@@ -65,6 +63,10 @@ msgstr "منوی اصلی"
 msgctxt "Menu location description"
 msgid "Footer Menu"
 msgstr "منوی پاورقی"
+
+#: inc/markup.php:153
+msgid "Language"
+msgstr "زبان"
 
 #: page.php:147
 msgid "Browse subcategories"
@@ -235,6 +237,17 @@ msgstr "سفارش شما چیست؟"
 msgid "Contact Us"
 msgstr "با ما تماس بگیرید"
 
+#~ msgid "Languages"
+#~ msgstr "زبان"
+
+#~ msgctxt "Site Language"
+#~ msgid "English"
+#~ msgstr "انگلیسی"
+
+#~ msgctxt "Site Language"
+#~ msgid "Persian"
+#~ msgstr "فارسی"
+
 #~ msgid "Products of this category"
 #~ msgstr "محصولات این گروه"
 
@@ -246,12 +259,6 @@ msgstr "با ما تماس بگیرید"
 
 #~ msgid "Our Mission"
 #~ msgstr "هدف ما"
-
-#~ msgid "English"
-#~ msgstr "انگلیسی"
-
-#~ msgid "Persian"
-#~ msgstr "فارسی"
 
 #~ msgid "Logo"
 #~ msgstr "نشان"

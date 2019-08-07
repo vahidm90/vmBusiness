@@ -21,18 +21,18 @@ $path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] ) ?
                 <?php _e( 'Our Products', VMBWPT_TEXT_DOMAIN ); ?>
             </h2>
 			<div class="slide-content h-100 pt-5 w-50" id="s2-1">
-				<p class="slide-text text-white-50 s2-step-2 h4 mt-2" id="s2-text-1-1"><?php _ex( 'Penetration Bitumen', 'Slider Text', VMBWPT_TEXT_DOMAIN ); ?></p>
-				<p class="slide-text text-white-50 s2-step-3 d-sm-inline-block h6 m-3" id="s2-text-1-2"><?php _e( '40-50', VMBWPT_TEXT_DOMAIN); ?></p>
-				<p class="slide-text text-white-50 s2-step-4 d-sm-inline-block h6 m-3" id="s2-text-1-3"><?php _e( '60-70', VMBWPT_TEXT_DOMAIN); ?></p>
-				<p class="slide-text text-white-50 s2-step-5 d-sm-inline-block h6 m-3" id="s2-text-1-4"><?php _e( '80-100', VMBWPT_TEXT_DOMAIN); ?></p>
+				<p class="slide-text s2-step-2 h4 mt-2" id="s2-text-1-1"><?php _ex( 'Penetration Bitumen', 'Slider Text', VMBWPT_TEXT_DOMAIN ); ?></p>
+				<p class="slide-text s2-step-3 d-sm-inline-block h6 m-3" id="s2-text-1-2"><?php _e( '40-50', VMBWPT_TEXT_DOMAIN); ?></p>
+				<p class="slide-text s2-step-4 d-sm-inline-block h6 m-3" id="s2-text-1-3"><?php _e( '60-70', VMBWPT_TEXT_DOMAIN); ?></p>
+				<p class="slide-text s2-step-5 d-sm-inline-block h6 m-3" id="s2-text-1-4"><?php _e( '80-100', VMBWPT_TEXT_DOMAIN); ?></p>
                 <img src="<?php echo $path; ?>/images/big/bitumen.jpg" alt="" class="s2-step-1 d-none d-sm-block h-auto mx-auto w-75" id="s2-img-1" />
             </div>
 			<div class="slide-content h-100 pt-5 w-50" id="s2-2">
-				<p class="slide-text text-warning s2-step-2 h4 mt-2" id="s2-text-2-1"><?php _e( 'Viscosity', VMBWPT_TEXT_DOMAIN ); ?></p>
-				<p class="slide-text text-warning s2-step-3 d-sm-inline-block h6 m-3" id="s2-text-2-2"><?php _e( 'VG10', VMBWPT_TEXT_DOMAIN); ?></p>
-				<p class="slide-text text-warning s2-step-4 d-sm-inline-block h6 m-3" id="s2-text-2-3"><?php _e( 'VG20', VMBWPT_TEXT_DOMAIN); ?></p>
-				<p class="slide-text text-warning s2-step-5 d-sm-inline-block h6 m-3" id="s2-text-2-4"><?php _e( 'VG30', VMBWPT_TEXT_DOMAIN); ?></p>
-				<p class="slide-text text-warning s2-step-6 d-sm-inline-block h6 m-3" id="s2-text-2-5"><?php _e( 'VG40', VMBWPT_TEXT_DOMAIN); ?></p>
+				<p class="slide-text s2-step-2 h4 mt-2" id="s2-text-2-1"><?php _e( 'Viscosity', VMBWPT_TEXT_DOMAIN ); ?></p>
+				<p class="slide-text s2-step-3 d-sm-inline-block h6 m-3" id="s2-text-2-2"><?php _e( 'VG10', VMBWPT_TEXT_DOMAIN); ?></p>
+				<p class="slide-text s2-step-4 d-sm-inline-block h6 m-3" id="s2-text-2-3"><?php _e( 'VG20', VMBWPT_TEXT_DOMAIN); ?></p>
+				<p class="slide-text s2-step-5 d-sm-inline-block h6 m-3" id="s2-text-2-4"><?php _e( 'VG30', VMBWPT_TEXT_DOMAIN); ?></p>
+				<p class="slide-text s2-step-6 d-sm-inline-block h6 m-3" id="s2-text-2-5"><?php _e( 'VG40', VMBWPT_TEXT_DOMAIN); ?></p>
                 <img src="<?php echo $path; ?>/images/big/grade.jpg" alt="" class="s2-step-1 d-none d-sm-block h-auto mx-auto w-75" id="s2-img-2"/>
             </div>
 		</li>

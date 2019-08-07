@@ -49,7 +49,7 @@ get_header( 'front-page' );
                 </h2>
             </div>
             <div class="col-12">
-                <div class="content">
+                <div class="content mb-5">
 	                <?php echo get_post( VMBWPT_LANGUAGES[$vmbwpt_lang]['pages']['home'], 'OBJECT', 'display' )->post_content; ?>
                 </div>
             </div>

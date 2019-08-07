@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-08-06 17:07+0430\n"
+"POT-Creation-Date: 2019-08-07 15:59+0430\n"
 "PO-Revision-Date: 2019-08-04 17:10+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -13,9 +13,7 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;esc_attr_e;"
-"esc_attr__;esc_attr_x:1,2c;esc_html__;esc_html_x:1,2c;esc_html_e;"
-"translate_nooped_plural\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;translate_nooped_plural\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: .git\n"
 "X-Poedit-SearchPathExcluded-1: languages\n"
@@ -43,12 +41,10 @@ msgid "Our Mission"
 msgstr ""
 
 #: functions.php:14
-msgctxt "Site Language"
 msgid "English"
 msgstr ""
 
 #: functions.php:23
-msgctxt "Site Language"
 msgid "Persian"
 msgstr ""
 
@@ -65,6 +61,10 @@ msgstr ""
 #: inc/init.php:32
 msgctxt "Menu location description"
 msgid "Footer Menu"
+msgstr ""
+
+#: inc/markup.php:153
+msgid "Language"
 msgstr ""
 
 #: page.php:147

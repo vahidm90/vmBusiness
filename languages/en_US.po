@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-08-06 17:08+0430\n"
-"PO-Revision-Date: 2019-08-06 17:08+0430\n"
+"POT-Creation-Date: 2019-08-07 15:54+0430\n"
+"PO-Revision-Date: 2019-08-07 15:55+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -42,12 +42,10 @@ msgid "Our Mission"
 msgstr "Our Mission"
 
 #: functions.php:14
-msgctxt "Site Language"
 msgid "English"
 msgstr "English"
 
 #: functions.php:23
-msgctxt "Site Language"
 msgid "Persian"
 msgstr "Persian"
 
@@ -65,6 +63,10 @@ msgstr "Main Navigation"
 msgctxt "Menu location description"
 msgid "Footer Menu"
 msgstr "Footer Menu"
+
+#: inc/markup.php:153
+msgid "Language"
+msgstr "Language"
 
 #: page.php:147
 msgid "Browse subcategories"
@@ -235,6 +237,17 @@ msgstr "What is your order?"
 msgid "Contact Us"
 msgstr "Contact Us"
 
+#~ msgid "Languages"
+#~ msgstr "Languages"
+
+#~ msgctxt "Site Language"
+#~ msgid "English"
+#~ msgstr "English"
+
+#~ msgctxt "Site Language"
+#~ msgid "Persian"
+#~ msgstr "Persian"
+
 #~ msgid "Products of this category"
 #~ msgstr "Products of this category"
 
@@ -246,12 +259,6 @@ msgstr "Contact Us"
 
 #~ msgid "Our Mission"
 #~ msgstr "هدف ما"
-
-#~ msgid "English"
-#~ msgstr "انگلیسی"
-
-#~ msgid "Persian"
-#~ msgstr "فارسی"
 
 #~ msgid "Logo"
 #~ msgstr "نشان"
