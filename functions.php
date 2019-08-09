@@ -12,7 +12,7 @@ define(
 	array(
 		'English' => array(
 			'direction'  => 'ltr',
-			'prefix'     => 'en',
+			'prefix'     => '',
 			'native'     => 'English',
 			'translated' => __( 'English', VMBWPT_TEXT_DOMAIN ),
 			'font-url'   => array(),
