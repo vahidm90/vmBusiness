@@ -135,7 +135,7 @@ function vmbwpt_mod_menu_items( $items, $args ) {
 			continue;
 		endif;
 		$other_lang [ $key ]            = $values;
-		$other_lang [ $key ]['address'] = ( empty( $values['prefix'] ) ? '' : "http://{$values['prefix']}." ) . ( $vmbwpt_is_dev ? VM_DEV_ADDRESS : VM_LIVE_ADDRESS );
+		$other_lang [ $key ]['address'] = 'http://' . ( empty( $values['prefix'] ) ? '' : "{$values['prefix']}." ) . ( $vmbwpt_is_dev ? VM_DEV_ADDRESS : VM_LIVE_ADDRESS );
 	endforeach;
 
 	if ( empty( $other_lang ) ) :
