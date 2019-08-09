@@ -135,7 +135,7 @@ function vmbwpt_mod_menu_items( $items, $args ) {
 			continue;
 		endif;
 		$other_lang [ $key ]            = $values;
-		$other_lang [ $key ]['address'] = "http://{$values['prefix']}." . ( $vmbwpt_is_dev ? 'mywebsite.test/' : 'petroneginj.com/' );
+		$other_lang [ $key ]['address'] = ( empty( $values['prefix'] ) ? '' : "http://{$values['prefix']}." ) . ( $vmbwpt_is_dev ? VM_DEV_ADDRESS : VM_LIVE_ADDRESS );
 	endforeach;
 
 	if ( empty( $other_lang ) ) :
@@ -226,7 +226,7 @@ function vmbwpt_set_doc_title( $title ) {
 		else:
 			$title = esc_html( get_the_title() );
 			foreach ( $parents as $parent ) :
-				$title .= ' << ' . esc_html( get_the_title( $parent ) );
+				$title .= ' < ' . esc_html( get_the_title( $parent ) );
 			endforeach;
 
 			return $title . ' | ' . get_bloginfo();
