@@ -1,7 +1,5 @@
 <?php
 
-//get_template_part( 'animSlide/index' );
-
 global $vmbwpt_lang;
 
 $path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] ) ?

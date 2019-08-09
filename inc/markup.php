@@ -10,7 +10,7 @@
  *
  * @return       string Modified markup
  */
-function vmbwpt_nav_a_title( $title, $item, $args, $depth ) {
+function vmbwpt_menu_a_title( $title, $item, $args, $depth ) {
 	global $vmbwpt_lang;
 
 	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
@@ -24,7 +24,7 @@ function vmbwpt_nav_a_title( $title, $item, $args, $depth ) {
 	return $title;
 }
 
-add_filter( 'nav_menu_item_title', 'vmbwpt_nav_a_title', 10, 4 );
+add_filter( 'nav_menu_item_title', 'vmbwpt_menu_a_title', 10, 4 );
 
 /**
  * Modifies walker menu <li> markup.
@@ -36,7 +36,7 @@ add_filter( 'nav_menu_item_title', 'vmbwpt_nav_a_title', 10, 4 );
  *
  * @return       string Modified markup
  */
-function vmbwpt_nav_li_tag( $html, $item, $depth, $args ) {
+function vmbwpt_menu_li_tag( $html, $item, $depth, $args ) {
 	global $vmbwpt_lang;
 
 	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
@@ -46,7 +46,7 @@ function vmbwpt_nav_li_tag( $html, $item, $depth, $args ) {
 	return $html;
 }
 
-//add_filter( 'walker_nav_menu_start_el', 'vmbwpt_nav_li_tag', 10, 4 );
+//add_filter( 'walker_nav_menu_start_el', 'vmbwpt_menu_li_tag', 10, 4 );
 
 /**
  * Modifies walker menu <a> attributes.
@@ -58,7 +58,7 @@ function vmbwpt_nav_li_tag( $html, $item, $depth, $args ) {
  *
  * @return         array  Modified attributes
  */
-function vmbwpt_nav_a_attrib( $attribs, $item, $args, $depth ) {
+function vmbwpt_menu_a_attrib( $attribs, $item, $args, $depth ) {
 	global $vmbwpt_lang;
 
 	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
@@ -74,7 +74,7 @@ function vmbwpt_nav_a_attrib( $attribs, $item, $args, $depth ) {
 	return $attribs;
 }
 
-add_filter( 'nav_menu_link_attributes', 'vmbwpt_nav_a_attrib', 10, 4 );
+add_filter( 'nav_menu_link_attributes', 'vmbwpt_menu_a_attrib', 10, 4 );
 
 /**
  * Modifies walker menu <li> classes.
@@ -86,7 +86,7 @@ add_filter( 'nav_menu_link_attributes', 'vmbwpt_nav_a_attrib', 10, 4 );
  *
  * @return         array  Modified classes
  */
-function vmbwpt_nav_li_class( $classes, $item, $args, $depth ) {
+function vmbwpt_menu_li_class( $classes, $item, $args, $depth ) {
 	global $vmbwpt_lang;
 
 	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
@@ -98,7 +98,7 @@ function vmbwpt_nav_li_class( $classes, $item, $args, $depth ) {
 	return $classes;
 }
 
-add_filter( 'nav_menu_css_class', 'vmbwpt_nav_li_class', 10, 4 );
+add_filter( 'nav_menu_css_class', 'vmbwpt_menu_li_class', 10, 4 );
 
 /**
  * Modifies walker menu <ul> classes.
@@ -109,7 +109,7 @@ add_filter( 'nav_menu_css_class', 'vmbwpt_nav_li_class', 10, 4 );
  *
  * @return         array  Modified classes
  */
-function vmbwpt_nav_ul_class( $classes, $args, $depth ) {
+function vmbwpt_menu_ul_class( $classes, $args, $depth ) {
 	global $vmbwpt_lang;
 
 	if ( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] !== $args->menu ) :
@@ -121,10 +121,10 @@ function vmbwpt_nav_ul_class( $classes, $args, $depth ) {
 	return $classes;
 }
 
-add_filter( 'nav_menu_submenu_css_class', 'vmbwpt_nav_ul_class', 10, 3 );
+add_filter( 'nav_menu_submenu_css_class', 'vmbwpt_menu_ul_class', 10, 3 );
 
-function vmbwpt_add_nav_menu_item( $items, $args ) {
-	global $vmbwpt_lang;
+function vmbwpt_mod_menu_items( $items, $args ) {
+	global $vmbwpt_lang, $vmbwpt_is_dev;
 
 	if ( ! in_array( $args->menu, VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus'], true ) ) :
 		return $items;
@@ -134,8 +134,8 @@ function vmbwpt_add_nav_menu_item( $items, $args ) {
 		if ( $vmbwpt_lang === $key ) :
 			continue;
 		endif;
-		$other_lang [ $key ]    = $values;
-		$other_lang [ $key ]['address'] = ( false === strpos( $_SERVER['HTTP_HOST'], "{$values['prefix']}" ) ? "http://{$values['prefix']}.{$_SERVER['HTTP_HOST']}/" : "http://{$_SERVER['HTTP_HOST']}/" );
+		$other_lang [ $key ]            = $values;
+		$other_lang [ $key ]['address'] = "http://{$values['prefix']}." . ( $vmbwpt_is_dev ? 'mywebsite.test/' : 'petroneginj.com/' );
 	endforeach;
 
 	if ( empty( $other_lang ) ) :
@@ -146,7 +146,7 @@ function vmbwpt_add_nav_menu_item( $items, $args ) {
 
 	switch ( $args->menu ) :
 		case VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['main'] :
-			
+
 			$lang_items = '';
 			$languages  = sprintf(
 				'<span dir="%1$s">%2$s</span>%3$s',
@@ -154,7 +154,7 @@ function vmbwpt_add_nav_menu_item( $items, $args ) {
 				__( 'Language', VMBWPT_TEXT_DOMAIN ),
 				'English' === $vmbwpt_lang ? '' : ' <span dir="ltr">Language</span>'
 			);
-			$html = <<<html
+			$html       = <<<html
 <li class="menu-item-has-children list-group-item position-relative">
 	<a href="#" class="text-light">
 		$languages
@@ -163,27 +163,27 @@ function vmbwpt_add_nav_menu_item( $items, $args ) {
 	<ul class="sub-menu list-group list-group-flush d-0">%s</ul>
 </li>
 html;
-			
-				foreach ( $other_lang as $lang => $values ) :
-					$trans = $lang === $values['translated'] ? '' : "<span>{$values['translated']}</span> ";
-					$lang_items .= <<<html
+
+			foreach ( $other_lang as $lang => $values ) :
+				$trans      = $lang === $values['translated'] ? '' : "<span>{$values['translated']}</span> ";
+				$lang_items .= <<<html
 <li class="list-group-item position-relative">
 	<a href="{$values['address']}" class="text-light">
 		$trans<span dir="{$values['direction']}">{$values['native']}</span>
 	</a>
 </li>
 html;
-				endforeach;
-				
+			endforeach;
+
 			$html = sprintf( $html, $lang_items );
-			
+
 			break;
-			
-		case VMBWPT_LANGUAGES[$vmbwpt_lang]['menus']['footer'] :
+
+		case VMBWPT_LANGUAGES[ $vmbwpt_lang ]['menus']['footer'] :
 
 			foreach ( $other_lang as $lang => $values ) :
 				$trans = $lang === $values['translated'] ? '' : "<span>{$values['translated']}</span> ";
-				$html .= <<<html
+				$html  .= <<<html
 <li class="menu-item">
 	<a href="{$values['address']}" class="text-light">
 		$trans<span dir="{$values['direction']}">{$values['native']}</span>
@@ -194,13 +194,13 @@ html;
 			endforeach;
 
 			break;
-			
+
 	endswitch;
 
 	return $items . $html;
 }
 
-add_filter( 'wp_nav_menu_items', 'vmbwpt_add_nav_menu_item', 10, 2 );
+add_filter( 'wp_nav_menu_items', 'vmbwpt_mod_menu_items', 10, 2 );
 
 //TODO: Create titles for all page templates.
 
