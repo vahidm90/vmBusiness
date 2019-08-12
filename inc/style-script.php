@@ -10,8 +10,7 @@ function vmbwpt_load_css_js() {
 	$min = $vmbwpt_is_dev ? '' : '.min';
 	$css_dep = array();
 	$js_dep  = array();
-	$path    = ( empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] ) ?
-		get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] );
+	$path = get_template_directory_uri() . '/assets';
 
 	wp_deregister_script( 'jquery' );
 	if ( ! is_admin() ) :

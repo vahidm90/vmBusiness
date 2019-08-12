@@ -7,8 +7,7 @@
 <?php
 global $vmbwpt_lang, $vmbwpt_comma, $vmbwpt_12;
 
-$path = empty( VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'] ) ?
-	get_template_directory_uri() . '/assets' : VMBWPT_LANGUAGES[ $vmbwpt_lang ]['assets-dir'];
+$path = get_template_directory_uri() . '/assets';
 
 //TODO: Add page links
 

@@ -24,7 +24,6 @@ define(
 			'prefix'     => 'fa',
 			'native'     => 'فارسی',
 			'translated' => __( 'Persian', VMBWPT_TEXT_DOMAIN ),
-			'assets-dir' => $vmbwpt_is_dev ? '' : 'http://' . VM_LIVE_ADDRESS . '/wp-content/themes/VMBusinessRep/assets',
 			'font-url'   => array(),
 			'pages'      => array( 'contact' => 5, 'home' => 15, 'product' => 17, 'about' => 13 ),
 			'menus'      => array( 'main' => 2, 'footer' => 3 )
